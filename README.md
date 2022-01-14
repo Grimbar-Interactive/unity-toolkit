@@ -1,2 +1,2 @@
-# unity-toolkit
-Scripting toolkit for building Unity apps.
+# Unity Variables
+Scriptable object variables for building Unity apps.

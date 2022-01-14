@@ -1,0 +1,17 @@
+{
+    "name": "GrimbarInteractive.UnityToolkit.Variables.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:0ff51d9640894c441a1d1e5988309ba4",
+        "GUID:e048eeec9bdb9d30448017b829deb3f6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
