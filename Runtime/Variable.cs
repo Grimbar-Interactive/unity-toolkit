@@ -1,6 +1,9 @@
-﻿using Sirenix.OdinInspector;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
+
+#if ODIN_INSPECTOR
+using Sirenix.OdinInspector;
+#endif
 
 namespace GI.UnityToolkit.Variables
 {
@@ -12,9 +15,13 @@ namespace GI.UnityToolkit.Variables
     {
         #region UNITY_EDITOR_INTERFACE
 
-        [Title("Variable")]
-        [Tooltip("Current value this variable has in the game.")]
-        [SerializeField, PropertyOrder(1)] private T value = default;
+#if ODIN_INSPECTOR
+        [Title("Variable"), PropertyOrder(1)]
+#else
+        [Header("Variable")]
+#endif
+        [Tooltip("Current value this variable has in the game."), SerializeField] private T value = default;
+        
         public T Value
         {
             get => value;
@@ -58,8 +65,12 @@ namespace GI.UnityToolkit.Variables
 
     public abstract class Variable : DataObject
     {
-        [Title("Events")]
-        [SerializeField, PropertyOrder(3)] protected UnityEvent OnChangedEvent = default;
+#if ODIN_INSPECTOR
+        [Title("Events"), PropertyOrder(3)]
+#else
+        [Header("Events")]
+#endif
+        [SerializeField] protected UnityEvent OnChangedEvent = default;
         
         public void AddListener(UnityAction listener)
         {

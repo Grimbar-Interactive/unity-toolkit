@@ -1,5 +1,8 @@
-﻿using Sirenix.OdinInspector;
-using UnityEngine;
+﻿using UnityEngine;
+
+#if ODIN_INSPECTOR
+using Sirenix.OdinInspector;
+#endif
 
 namespace GI.UnityToolkit.Variables
 {
@@ -20,11 +23,18 @@ namespace GI.UnityToolkit.Variables
 
         #region UNITY_EDITOR_INTERFACE
 
-        [Title("Default")]
-        [Tooltip("Value will be set to this whenever this variable is reset."), PropertyOrder(2)]
+#if ODIN_INSPECTOR
+        [Title("Default"), PropertyOrder(2)]
+#else
+        [Header("Default")]
+#endif
+        [Tooltip("Value will be set to this whenever this variable is reset.")]
         public T DefaultValue;
 
-        [Tooltip("Set this to false if you don't want to reset to default value on enable."), PropertyOrder(2)]
+#if ODIN_INSPECTOR
+        [PropertyOrder(2)]
+#endif
+        [Tooltip("Set this to false if you don't want to reset to default value on enable.")]
         public bool DefaultOnEnable = true;
 
         #endregion UNITY_EDITOR_INTERFACE
