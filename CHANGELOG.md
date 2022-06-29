@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ==
 
+## [1.0.1] - 2022-06-29
+### Added
+- BoolVariable now has Toggle() method.
+
 ## [1.0.0] - 2022-01-14
 ### Added
 - Initial creation of Unity-Variables.

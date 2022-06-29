@@ -12,6 +12,11 @@ namespace GI.UnityToolkit.Variables
             return variable != null && variable.Value;
         }
 
+        public void Toggle()
+        {
+            Value = !Value;
+        }
+
         #endregion PUBLIC_INTERFACE
     }
 }
