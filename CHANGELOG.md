@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ==
+## [1.0.3] - 2022-11-07
+### Changed
+- ManagedObject now supporting editor callbacks again.
+
 ## [1.0.2] - 2022-07-26
 ### Changed
 - ManagedObject now only uses OnEnable and OnDisable lifetime methods.
