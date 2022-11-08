@@ -1,8 +1,8 @@
 {
   "name": "com.grimbar-interactive.unity-variables",
   "displayName": "Unity Variables",
-  "version": "1.0.3",
-  "unity": "2020.3",
+  "version": "1.0.4",
+  "unity": "2021.3",
   "description": "Scriptable object variables.",
   "keywords": [ "variable","variables", "game", "games", "unity" ],
   "category": "unity",

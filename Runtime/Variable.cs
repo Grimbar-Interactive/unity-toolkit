@@ -3,6 +3,8 @@ using UnityEngine.Events;
 
 #if ODIN_INSPECTOR
 using Sirenix.OdinInspector;
+#else
+using NaughtyAttributes;
 #endif
 
 namespace GI.UnityToolkit.Variables
@@ -15,10 +17,16 @@ namespace GI.UnityToolkit.Variables
     {
         #region UNITY_EDITOR_INTERFACE
 
+        private void OnValueChanged()
+        {
+            if (Application.isPlaying == false) return;
+            OnChangedEvent?.Invoke();
+        }
+        
 #if ODIN_INSPECTOR
-        [Title("Variable"), PropertyOrder(1)]
+        [Title("Variable"), PropertyOrder(1), OnValueChanged(nameof(OnValueChanged))]
 #else
-        [Header("Variable")]
+        [Header("Variable"), OnValueChanged(nameof(OnValueChanged))]
 #endif
         [Tooltip("Current value this variable has in the game."), SerializeField] private T value = default;
         
