@@ -2,6 +2,9 @@
 
 namespace GI.UnityToolkit.Variables
 {
+    /// <summary>
+    /// ScriptableObject type that has hooks for when the game enters and exits play mode.
+    /// </summary>
     public abstract class ManagedObject : ScriptableObject
     {
         protected abstract void OnBegin();
@@ -14,11 +17,20 @@ namespace GI.UnityToolkit.Variables
             {
                 OnBegin();
             }
+            
+            UnityEditor.EditorApplication.playModeStateChanged += OnPlayStateChange;
         }
 
         private void OnDisable()
         {
-            OnEnd();
+            UnityEditor.EditorApplication.playModeStateChanged -= OnPlayStateChange;
+        }
+
+        private void OnPlayStateChange(UnityEditor.PlayModeStateChange state)
+        {
+            if (state == UnityEditor.PlayModeStateChange.ExitingPlayMode) {
+                OnEnd();
+            }
         }
 #else
         /// <summary>
