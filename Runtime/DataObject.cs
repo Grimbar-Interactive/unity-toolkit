@@ -21,6 +21,7 @@ namespace GI.UnityToolkit.Variables
 
         protected override void OnBegin()
         {
+            Debug.Log("Begin!", this);
 #if !UNITY_EDITOR
             DeveloperDescription = null;
 #endif
@@ -30,6 +31,7 @@ namespace GI.UnityToolkit.Variables
 
         protected override void OnEnd()
         {
+            Debug.Log("End!", this);
         }
 
         #endregion MANAGED_OBJECT
