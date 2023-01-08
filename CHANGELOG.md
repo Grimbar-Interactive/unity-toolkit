@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
+## [1.0.6] - 2023-01-07
+### Added
+- QueueVariable is now a default variable type.
+
 ==
 ## [1.0.5] - 2022-11-11
 ### Updated

@@ -3,7 +3,7 @@
 namespace GI.UnityToolkit.Variables
 {
     /// <summary>
-    ///     Base class for generic variable lists
+    ///   Base class for generic variable lists
     /// </summary>
     public abstract class ListVariable<T> : DefaultedVariable<List<T>>
     {
@@ -19,6 +19,13 @@ namespace GI.UnityToolkit.Variables
             {
                 OnChangedEvent?.Invoke();
             }
+        }
+
+        public void RemoveAt(int index)
+        {
+            if (Value.Count <= index || index <= 0) return;
+            Value.RemoveAt(index);
+            OnChangedEvent?.Invoke();
         }
     }
 }
