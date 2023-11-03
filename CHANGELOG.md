@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ==
+## [1.1.0] - 2023-11-03
+### Added
+- PersistableVariable class added to allow saving of basic variable values.
+### Changed
+- DefaultedVariable<T> has been merged into Variable<T>.
+### Removed
+- All PlayerPref variables have been removed (BoolPrefVariable, etc).
+
 ## [1.0.6] - 2023-01-07
 ### Added
 - QueueVariable is now a default variable type.

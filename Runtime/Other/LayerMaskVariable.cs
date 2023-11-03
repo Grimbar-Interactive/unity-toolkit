@@ -3,7 +3,7 @@
 namespace GI.UnityToolkit.Variables
 {
     [CreateAssetMenu(menuName = "Variable/Unity/LayerMask")]
-    public class LayerMaskVariable : DefaultedVariable<LayerMask>
+    public class LayerMaskVariable : Variable<LayerMask>
     {
         #region PUBLIC_INTERFACE
 
@@ -14,7 +14,7 @@ namespace GI.UnityToolkit.Variables
 
         public static implicit operator int(LayerMaskVariable variable)
         {
-            return variable == null ? 0 : (int)variable.Value;
+            return variable == null ? 0 : variable.Value;
         }
         
         #endregion PUBLIC_INTERFACE

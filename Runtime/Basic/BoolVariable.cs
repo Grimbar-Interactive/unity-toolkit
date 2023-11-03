@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace GI.UnityToolkit.Variables
 {
     [CreateAssetMenu(menuName = "Variable/Bool")]
-    public class BoolVariable : DefaultedVariable<bool>
+    public class BoolVariable : PersistableVariable<bool>
     {
         #region PUBLIC_INTERFACE
 
@@ -18,5 +19,15 @@ namespace GI.UnityToolkit.Variables
         }
 
         #endregion PUBLIC_INTERFACE
+
+        protected override Action<string, bool> GetSaveMethod()
+        {
+            return (id, value) => PlayerPrefs.SetInt(id, value ? 1 : 0);
+        }
+
+        protected override Func<string, bool, bool> GetLoadMethod()
+        {
+            return (id, defaultValue) => PlayerPrefs.GetInt(id, defaultValue ? 1 : 0) == 1;
+        }
     }
 }

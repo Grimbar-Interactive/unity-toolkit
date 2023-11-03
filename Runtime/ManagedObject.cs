@@ -7,8 +7,8 @@ namespace GI.UnityToolkit.Variables
     /// </summary>
     public abstract class ManagedObject : ScriptableObject
     {
-        protected abstract void OnBegin();
-        protected abstract void OnEnd();
+        protected virtual void OnBegin() {}
+        protected virtual void OnEnd() {}
         
 #if UNITY_EDITOR
         private void OnEnable()

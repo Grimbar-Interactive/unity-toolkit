@@ -3,9 +3,9 @@
 namespace GI.UnityToolkit.Variables
 {
     /// <summary>
-    ///   Base class for generic variable queues
+    /// Base class for generic variable queues
     /// </summary>
-    public abstract class QueueVariable<T> : DefaultedVariable<Queue<T>>
+    public abstract class QueueVariable<T> : Variable<Queue<T>>
     {
         public void Enqueue(T item)
         {
@@ -31,5 +31,7 @@ namespace GI.UnityToolkit.Variables
                 OnChangedEvent?.Invoke();
             }
         }
+
+        public int Count => Value?.Count ?? 0;
     }
 }

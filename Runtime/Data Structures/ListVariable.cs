@@ -3,9 +3,9 @@
 namespace GI.UnityToolkit.Variables
 {
     /// <summary>
-    ///   Base class for generic variable lists
+    /// Base class for generic variable lists
     /// </summary>
-    public abstract class ListVariable<T> : DefaultedVariable<List<T>>
+    public abstract class ListVariable<T> : Variable<List<T>>
     {
         public void Add(T item)
         {
@@ -27,5 +27,7 @@ namespace GI.UnityToolkit.Variables
             Value.RemoveAt(index);
             OnChangedEvent?.Invoke();
         }
+        
+        public int Count => Value?.Count ?? 0;
     }
 }

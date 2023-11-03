@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace GI.UnityToolkit.Variables
 {
     [CreateAssetMenu(menuName = "Variable/Int")]
-    public class IntVariable : DefaultedVariable<int>
+    public class IntVariable : PersistableVariable<int>
     {
         #region PUBLIC_INTERFACE
 
@@ -38,5 +39,9 @@ namespace GI.UnityToolkit.Variables
         }
 
         #endregion PUBLIC_INTERFACE
+
+        protected override Action<string, int> GetSaveMethod() => PlayerPrefs.SetInt;
+
+        protected override Func<string, int, int> GetLoadMethod() => PlayerPrefs.GetInt;
     }
 }
