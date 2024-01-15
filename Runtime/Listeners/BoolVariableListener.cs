@@ -12,7 +12,7 @@ namespace GI.UnityToolkit.Variables.Listeners
         [SerializeField] private BoolVariable variable;
 
 #if ODIN_INSPECTOR
-        private bool VariableIsNull => manager == null;
+        private bool VariableIsNull => variable == null;
 
         [Title("Events"), HideIfGroup("Events", Condition = nameof(VariableIsNull))]
 #else
