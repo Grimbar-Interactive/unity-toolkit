@@ -14,7 +14,7 @@ namespace GI.UnityToolkit.Variables
 
         public static implicit operator int(LayerMaskVariable variable)
         {
-            return variable == null ? 0 : variable.Value;
+            return variable == null ? 0 : variable.Value.value;
         }
         
         #endregion PUBLIC_INTERFACE
