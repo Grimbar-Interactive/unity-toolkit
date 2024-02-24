@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEditor.Build;
 using UnityEditor.Compilation;
 
-namespace GI.UnityToolkit.Variables.Editor
+namespace GI.UnityToolkit.Variables.Editor.DependencyResolution
 {
     /// <summary>
     /// Adds the given define symbols to PlayerSettings define symbols.
