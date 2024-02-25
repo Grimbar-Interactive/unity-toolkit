@@ -5,7 +5,7 @@ using UnityEngine.Events;
 #if ODIN_INSPECTOR
 using Sirenix.OdinInspector;
 #else
-using NaughtyAttributes;
+using GI.UnityToolkit.Attributes;
 #endif
 
 namespace GI.UnityToolkit.Variables

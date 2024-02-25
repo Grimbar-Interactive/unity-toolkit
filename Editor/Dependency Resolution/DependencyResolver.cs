@@ -13,7 +13,7 @@ namespace GI.UnityToolkit.Variables.Editor.DependencyResolution
         private static readonly (string, string)[] Dependencies =
         {
             #if !ODIN_INSPECTOR
-            ("com.dbrizov.naughtyattributes", "https://github.com/dbrizov/NaughtyAttributes.git#upm")
+            ("com.grimbarinteractive.unityattributes", "https://github.com/Grimbar-Interactive/unity-attributes.git")
             #endif
         };
 
