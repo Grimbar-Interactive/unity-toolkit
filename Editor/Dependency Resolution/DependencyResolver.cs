@@ -12,9 +12,7 @@ namespace GI.UnityToolkit.Variables.Editor.DependencyResolution
     {
         private static readonly (string, string)[] Dependencies =
         {
-            #if !ODIN_INSPECTOR
             ("com.grimbarinteractive.unityattributes", "https://github.com/Grimbar-Interactive/unity-attributes.git")
-            #endif
         };
 
         [InitializeOnLoadMethod]
