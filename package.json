@@ -6,15 +6,6 @@
     "description": "Scriptable object variables.",
     "keywords": [ "variable","variables", "game", "games", "unity" ],
     "category": "unity",
-    "scopedRegistries": [
-        {
-            "name": "package.openupm.com",
-            "url": "https://package.openupm.com",
-            "scopes": [
-                "com.grimbarinteractive"
-            ]
-        }
-    ],
     "dependencies": {
         "com.grimbarinteractive.unity-attributes": "1.0.0"
     },
