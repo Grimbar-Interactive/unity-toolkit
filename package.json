@@ -1,16 +1,26 @@
 {
-  "name": "com.grimbarinteractive.unityvariables",
-  "displayName": "Unity Variables",
-  "version": "1.1.5",
-  "unity": "2022.3",
-  "description": "Scriptable object variables.",
-  "keywords": [ "variable","variables", "game", "games", "unity" ],
-  "category": "unity",
-  "dependencies": {
-  },
-  "author": {
-	  "name": "Grimbar Interactive",
-	  "email": "jacob@grimbar.dev",
-	  "url": "https://grimbarinteractive.com/"
-  }
+    "name": "com.grimbarinteractive.unity-variables",
+    "displayName": "Unity Variables",
+    "version": "1.1.5",
+    "unity": "2022.3",
+    "description": "Scriptable object variables.",
+    "keywords": [ "variable","variables", "game", "games", "unity" ],
+    "category": "unity",
+    "scopedRegistries": [
+        {
+            "name": "package.openupm.com",
+            "url": "https://package.openupm.com",
+            "scopes": [
+                "com.grimbarinteractive"
+            ]
+        }
+    ],
+    "dependencies": {
+        "com.grimbarinteractive.unity-attributes": "1.0.0"
+    },
+    "author": {
+      "name": "Grimbar Interactive",
+      "email": "jacob@grimbar.dev",
+      "url": "https://grimbarinteractive.com/"
+    }
 }
