@@ -1,7 +1,7 @@
 {
     "name": "com.grimbarinteractive.unity-variables",
     "displayName": "Unity Variables",
-    "version": "1.1.5",
+    "version": "1.1.6",
     "unity": "2022.3",
     "description": "Scriptable object variables.",
     "keywords": [ "variable","variables", "game", "games", "unity" ],
@@ -10,8 +10,8 @@
         "com.grimbarinteractive.unity-attributes": "1.0.0"
     },
     "author": {
-      "name": "Grimbar Interactive",
-      "email": "jacob@grimbar.dev",
-      "url": "https://grimbarinteractive.com/"
+        "name": "Grimbar Interactive",
+        "email": "jacob@grimbar.dev",
+        "url": "https://grimbarinteractive.com/"
     }
 }
