@@ -74,14 +74,19 @@ namespace GI.UnityToolkit.Variables
         
         public T DefaultValue => defaultValue;
         
-        public void SetValue(T newValue)
+        public virtual void SetValue(T newValue)
         {
             Value = newValue;
         }
 
-        public void SetValue(Variable<T> newValue)
+        public virtual void SetValue(Variable<T> newValue)
         {
             Value = newValue.Value;
+        }
+
+        public void SetValueQuietly(T newValue)
+        {
+            value = newValue;
         }
         
         public override string ToString()
@@ -92,7 +97,7 @@ namespace GI.UnityToolkit.Variables
         /// <summary>
         /// Sets the variable to its specified default value.
         /// </summary>
-        public void Default()
+        public virtual void Default()
         {
             var oldValue = Value;
             Value = DefaultValue;
